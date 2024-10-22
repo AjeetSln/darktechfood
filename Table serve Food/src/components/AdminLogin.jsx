@@ -9,11 +9,12 @@ const AdminLogin = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    const BASE_URL = process.env.BASE_URL;
 
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const result = await axios.post('http://localhost:3000/admin', { email, password });
+            const result = await axios.post(`${BASE_URL}/admin`, { email, password });
             console.log('Login Response:', result.data); 
             
             if (result.data === 'Success') {

@@ -6,6 +6,7 @@ import axios from 'axios';
 const PaymentDetails = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const BASE_URL = process.env.BASE_URL;
 
   // Destructure the data passed from the checkout page
   const { name, tableNo, mobileNo, cartItems, totalAmount } = location.state || {};
@@ -44,7 +45,7 @@ const PaymentDetails = () => {
 
       try {
         // Send order details to the backend
-        const response = await axios.post('http://localhost:3000/api/orders', orderDetails);
+        const response = await axios.post(`${BASE_URL}/api/orders`, orderDetails);
         
         if (response.status === 201) {
           console.log('Order saved successfully:', response.data);

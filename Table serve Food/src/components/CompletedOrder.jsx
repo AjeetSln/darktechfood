@@ -4,10 +4,12 @@ import Footer from './Footer';
 import { BiSearch } from 'react-icons/bi';
 import { MdCancel } from 'react-icons/md';
 
+
 const CompletedOrder = () => {
   const [completedOrders, setCompletedOrders] = useState([]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);  
   const [query, setQuery] = useState('');
+  const BASE_URL = process.env.BASE_URL;
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -24,7 +26,7 @@ const CompletedOrder = () => {
   useEffect(() => {
     const fetchCompletedOrders = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/orders/completedOrders'); // Updated endpoint
+        const response = await fetch(`${BASE_URL}/api/orders/completedOrders`); // Updated endpoint
         const data = await response.json();
         setCompletedOrders(data);
       } catch (error) {

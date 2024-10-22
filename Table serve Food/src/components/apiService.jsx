@@ -1,8 +1,9 @@
 // src/apiService.js
 import axios from 'axios';
 
+const BASE_URL = process.env.BASE_URL;
 
-const API_URL = 'http://localhost:3000/api/menu';
+const API_URL = `${BASE_URL}/api/menu`;  // Corrected template literal
 
 export const getAllMenuItems = async () => {
     try {

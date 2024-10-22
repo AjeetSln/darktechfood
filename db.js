@@ -2,9 +2,9 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const Admin = require('./models/Admin_1'); // Use require() instead of import
+require('dotenv').config();
 
-// MongoDB connection URL
-const MONGO_URI = 'mongodb+srv://Ajeet7668:Ajeet%407668@cluster0.xvt36.mongodb.net/TableServeFood1?retryWrites=true&w=majority&appName=Cluster0';
+const MONGO_URI = process.env.DATABASE;
 
 // Function to connect to MongoDB
 const connectDB = async () => {
