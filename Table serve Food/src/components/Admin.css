@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('https://img.freepik.com/free-photo/vestrahorn-mountains-stokksnes-iceland_335224-667.jpg?w=1380&t=st=1728310424~exp=1728311024~hmac=f760bc522faaa6020b4a9d4944330ff67fa2c126e83d1f8739d594258d4e93d2') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 420px; /* Ensures it doesn't exceed 420px on larger screens */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.wrapper h1 {
+  font-size: 28px;
+  text-align: center;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 20px;
+  font-weight: bold;
+}
+
+.input-box input::placeholder {
+  color: #fff;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+.wrapper button {
+  width: 100%; /* Ensures the button takes the full width of its container */
+  max-width: 250px; /* Set a max width to prevent it from becoming too large */
+  height: 45px; /* Keep the height consistent */
+  background: #fff;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: black;
+  font-weight: 700;
+  margin: 20px auto; /* Centers the button horizontally */
+  display: block; /* Ensures proper centering */
+  transition: background 0.3s ease;
+  overflow: hidden;
+}
+
+.wrapper button:hover {
+  background: #0c30cf;
+}
+
+@media (min-width: 768px) {
+  .wrapper h1 {
+    font-size: 36px; /* Larger heading on bigger screens */
+  }
+
+  .wrapper {
+    padding: 40px; /* Add more padding for larger screens */
+  }
+
+  .input-box input {
+    font-size: 18px; /* Slightly larger input text */
+  }
+}

@@ -1,0 +1,8 @@
+.Headline{
+    color: red;
+    text-shadow: 2px 1px grey;
+    margin-left: 30px;
+    font-size: 50px;
+    font-family: monospace;
+    text-align: center ;
+}

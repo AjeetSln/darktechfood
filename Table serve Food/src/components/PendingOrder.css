@@ -1,0 +1,170 @@
+/* Apply a full-height style to the screen */
+.screen {
+    width: 100%;
+    max-width: 1200px; /* Limiting width for larger screens */
+    margin: 10px; /* Centering container horizontally */
+    background-color: transparent; /* White background */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Minimum height to take full screen */
+    justify-content: flex-start; /* Ensure content starts at the top */
+    padding: 20px; /* Padding around the container */
+    overflow-y: auto; /* Allow vertical scrolling when necessary */
+    margin-left: 6px; /* Optional margin-left */
+    border-radius: 20px;
+}
+
+.pending-orders-title {
+    text-align: center;
+    font-size: 2.5rem; /* Larger font for title */
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.no-orders-text {
+    text-align: center;
+    font-size: 1.5rem; /* Increased font size for visibility */
+    color: #777;
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+.orders-list {
+    display: flex; /* Use flexbox for the orders list */
+    flex-direction: column; /* Stack orders vertically */
+    gap: 20px; /* Space between orders */
+    padding: 20px; 
+    width: 100%; /* Ensure the list takes full width */
+}
+
+.order-card {
+    background-color: #ffffff; /* White background for cards */
+    padding: 20px; /* Inner padding for cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover effects */
+    display: flex; /* Enable flexbox for internal content alignment */
+    flex-direction: column; /* Align items vertically */
+    margin-bottom: 20px;
+}
+
+.order-number {
+    font-weight: bold; /* Make the order number bold */
+    margin-right: 15px; /* Space between number and order details */
+    color: #1020f9; /* Change color as needed */
+    font-size: 40px; /* Large font for numbering */
+}
+
+.order-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.order-card h3, .order-card h4 {
+    margin: 10px 0;
+    color: #333;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.order-card p {
+    margin: 8px 0;
+    font-size: 2rem;
+    color: #555;
+    font-weight: bold;
+}
+
+.items-list {
+    margin-top: 10px;
+    border-top: 1px solid #eaeaea; /* Optional border to separate items */
+    padding-top: 10px; /* Add spacing above items */
+}
+
+.item-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Space between item cards */
+}
+
+.item-image {
+    width: 80px; /* Fixed width for item images */
+    height: 80px; /* Fixed height for item images */
+    border-radius: 5px; /* Rounded corners for images */
+    object-fit: cover; /* Ensure images cover the area */
+    margin-right: 15px; /* Space between image and text */
+}
+
+.item-details p {
+    margin: 5px 0;
+    font-size: 0.9rem; /* Adjust font size for item details */
+    color: #333;
+}
+
+/* Navbar styles */
+.navbar {
+    margin-bottom: 20px; /* Space below the navbar */
+    border-radius: 15px;
+}
+
+.search {
+    display: flex; /* Use flexbox for search container */
+    align-items: center; /* Center items vertically */
+    margin-top: 10px;
+}
+
+.search-input {
+    padding: 5px 10px; /* Inner padding for search input */
+    border: none; /* Border for input */
+    border-radius: 4px; /* Rounded corners for input */
+    width: 200px; /* Fixed width for search input */
+    background: transparent;
+}
+
+.search_icon {
+    margin-right: 5px; /* Space between icon and input */
+}
+
+.cancel {
+    cursor: pointer; /* Change cursor to pointer for cancel icon */
+    margin-left: 5px; /* Space between input and cancel icon */
+}
+.complete-order-button {
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .complete-order-button:hover {
+    background-color: #218838;
+  }
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .screen {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .pending-orders-title {
+        font-size: 2rem; /* Adjust title size for smaller screens */
+    }
+
+    .order-card {
+        padding: 15px; /* Reduce padding for order cards on smaller screens */
+    }
+
+    .item-image {
+        width: 60px; /* Reduce item image size for smaller screens */
+        height: 60px;
+    }
+
+    .item-details p {
+        font-size: 0.8rem; /* Adjust font size for smaller screens */
+    }
+
+    .search-input {
+        width: 100%; /* Make the search input full-width on smaller screens */
+    }
+}
